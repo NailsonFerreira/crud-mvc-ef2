@@ -3,14 +3,16 @@ using System;
 using CrudMvcEF.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CrudMvcEF.Migrations
 {
     [DbContext(typeof(CrudMvcEFContext))]
-    partial class CrudMvcEFContextModelSnapshot : ModelSnapshot
+    [Migration("20190317150128_OtherEntities")]
+    partial class OtherEntities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

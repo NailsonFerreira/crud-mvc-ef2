@@ -13,6 +13,8 @@ namespace CrudMvcEF.Models
         {
         }
 
-        public DbSet<CrudMvcEF.Models.Client> Client { get; set; }
+        public DbSet<Client> Client { get; set; }
+        public DbSet<Address> Address { get; set; }
+        public DbSet<Contact> Contact { get; set; }
     }
 }
