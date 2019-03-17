@@ -37,7 +37,8 @@ namespace CrudMvcEF
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<CrudMvcEFContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("CrudMvcEFContext")));
+                    options.UseMySql(Configuration.GetConnectionString("CrudMvcEFContext"), builder => 
+                    builder.MigrationsAssembly("CrudMvcEF")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
